@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+*,::after,::before{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+}
+
+html{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.5rem;
+  max-width: 140rem;
+    margin: 0 auto;
+    line-height: 2.2rem;
+}
+p{
+  color: gray;
+}
+.main{
+  padding: 2rem;
+}
+img{
+  width: 4rem;
+  height: 4rem;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.details{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+.details.unread{
+      background: #f6fafd;
+}
+.bolder{
+  color: black;
+  padding-right: 0.5rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.mark{
+    cursor: pointer;
+}
+.bold{
+  color: rgb(80, 80, 80);
+    cursor: pointer;
+      font-weight: 800;
+}
+.desc span{
+  color: gray;
+  opacity: 0.7;
+}
+.desc.unread p::after{
+  content: '';
+  background-color: var(--Red);
+  width: 0.75rem;
+  height: 0.75rem;
+  position: relative;
+  display: inline-block;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+}
+.reply{
+  margin-top: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.176);
+  transition: all 0.3s ease-in-out;
+}
+.reply:hover{
+        background: #f6fafd;
+}
+span.blue{
+  color: var(--Blue);
+  font-weight: 800;
+}
+.badge{
+  background: var(--Blue);
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.3rem;
+  color: #fff;
+}
+footer a{
+  color: var(--Blue);
+  opacity: 0.5;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media screen and (min-width: 600px) {
+  .main{
+    max-width: 60rem;
+    margin: 2rem auto;
+  }
+}
